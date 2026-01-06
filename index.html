@@ -50,6 +50,24 @@
         
         img { cursor: pointer; max-width: 100%; height: auto; }
         a { text-decoration: none !important; }
+        
+        /* Mobile navigation */
+        #mobile-menu { display: none; background-color: #1b0d2f; }
+        #mobile-menu.open { display: block; }
+        #mobile-menu a { display: block; padding: 12px 16px; color: #fff; border-top: 1px solid rgba(255,255,255,0.08); }
+        
+        /* Responsiveness tweaks */
+        @media (max-width: 992px) {
+            .price-large { font-size: 42px; }
+            .claim-banner h2 { font-size: 22px; }
+            .accordion span { font-size: 18px; }
+            .ing-circle { max-width: 200px; }
+            .ing-label { width: 90%; }
+        }
+        @media (max-width: 768px) {
+            .display-4 { font-size: 32px !important; line-height: 1.2; }
+            .lead { font-size: 16px; }
+        }
     </style>
 
 </head>
@@ -57,13 +75,22 @@
 <body>
     <div class="container-fluid dark-purple-bg py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <img src="https://primebiome24.com//statics/img/logo_white.png" style="max-width:100px;">
+            <img src="https://primebiome24.com//statics/img/logo_white.png" style="max-width:100px;" alt="PrimeBiome Logo">
+            <button id="mobile-menu-btn" class="btn btn-outline-light d-lg-none" type="button" aria-label="Abrir menu" aria-expanded="false">Menu</button>
             <div class="d-none d-lg-block text-white font-weight-bold">
                 <a href="#ingredients" class="text-white mx-3">Ingredients</a>
                 <a href="#bonuses" class="text-white mx-3">FREE Bonuses</a>
                 <a href="#faq" class="text-white mx-3">FAQ</a>
-                <a href="#order-now" class="ml-2"><img src="https://primebiome24.com//statics/img/order-now.png" style="max-width:120px;"></a>
+                <a href="#order-now" class="ml-2"><img src="https://primebiome24.com//statics/img/order-now.png" style="max-width:120px;" alt="Order Now"></a>
             </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="d-lg-none">
+        <div class="container">
+            <a href="#ingredients">Ingredients</a>
+            <a href="#bonuses">FREE Bonuses</a>
+            <a href="#faq">FAQ</a>
+            <a href="#order-now">Order Now</a>
         </div>
     </div>
 
@@ -71,12 +98,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 text-center">
-                    <img src="https://primebiome24.com//statics/img/tsl-main.png" style="max-width:350px;">
+                    <img src="https://primebiome24.com//statics/img/tsl-main.png" style="max-width:350px;" alt="PrimeBiome Product">
                 </div>
                 <div class="col-lg-8 py-3">
                     <h1 class="font-weight-bold display-4">The Skin-Gut Cell Turnover Breakthrough</h1>
                     <p class="lead mt-4">Skin cell turnover rejuvenates skin by replacing old cells with new ones. PrimeBiome supports beneficial bacteria, helping to promote better skin health and a more youthful appearance.</p>
-                    <img src="https://primebiome24.com//statics/img/certifications_new.png" class="mt-4" style="max-width:500px;">
+                    <img src="https://primebiome24.com//statics/img/certifications_new.png" class="mt-4" style="max-width:500px;" alt="Certifications" loading="lazy">
                 </div>
             </div>
         </div>
@@ -86,31 +113,31 @@
         <h1 class="text-center font-weight-bold mb-5">Inside every probiotic gummy of PrimeBiome:</h1>
         <div class="row text-center justify-content-center">
             <div class="col-lg-4 col-md-6 mb-5">
-                <img src="https://primebiome24.com//statics/img/ingredient1.png" class="ing-circle">
+                <img src="https://primebiome24.com//statics/img/ingredient1.png" class="ing-circle" alt="Ingredient B. Coagulans" loading="lazy">
                 <div class="ing-label">B. Coagulans</div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <img src="https://primebiome24.com//statics/img/ingredient2.png" class="ing-circle">
+                <img src="https://primebiome24.com//statics/img/ingredient2.png" class="ing-circle" alt="Ingredient Babchi" loading="lazy">
                 <div class="ing-label">Babchi</div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <img src="https://primebiome24.com//statics/img/ingredient3.png" class="ing-circle">
+                <img src="https://primebiome24.com//statics/img/ingredient3.png" class="ing-circle" alt="Ingredient Dandelion" loading="lazy">
                 <div class="ing-label">Dandelion</div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <img src="https://primebiome24.com//statics/img/ingredient4.png" class="ing-circle">
+                <img src="https://primebiome24.com//statics/img/ingredient4.png" class="ing-circle" alt="Ingredient Fennel" loading="lazy">
                 <div class="ing-label">Fennel</div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <img src="https://primebiome24.com//statics/img/ingredient5.png" class="ing-circle">
+                <img src="https://primebiome24.com//statics/img/ingredient5.png" class="ing-circle" alt="Ingredient Inulin" loading="lazy">
                 <div class="ing-label">Inulin</div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <img src="https://primebiome24.com//statics/img/ingredient6.png" class="ing-circle">
+                <img src="https://primebiome24.com//statics/img/ingredient6.png" class="ing-circle" alt="Ingredient Fenugreek" loading="lazy">
                 <div class="ing-label">Fenugreek</div>
             </div>
             <div class="col-lg-4 col-md-6 mb-5">
-                <img src="https://primebiome24.com//statics/img/ingredient10.png" class="ing-circle">
+                <img src="https://primebiome24.com//statics/img/ingredient10.png" class="ing-circle" alt="Ingredient Slippery Elm Bark" loading="lazy">
                 <div class="ing-label">Slippery Elm Bark</div>
             </div>
         </div>
@@ -122,21 +149,21 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="bg-white text-dark rounded shadow overflow-hidden h-100">
-                        <img src="https://primebiome24.com//statics/img/bonus1.png" class="img-fluid">
+                        <img src="https://primebiome24.com//statics/img/bonus1.png" class="img-fluid" alt="Bonus 1 - Cellulite" loading="lazy">
                         <div class="dark-purple-bg text-white p-2"><b>Bonus #1 - See You Never, Cellulite!</b></div>
                         <p class="p-3">Erase cellulite fast, naturally, and with no effort! Tips on how to finally get rid of the orange-peel skin.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
                     <div class="bg-white text-dark rounded shadow overflow-hidden h-100">
-                        <img src="https://primebiome24.com//statics/img/bonus2.png" class="img-fluid">
+                        <img src="https://primebiome24.com//statics/img/bonus2.png" class="img-fluid" alt="Bonus 2 - Hair" loading="lazy">
                         <div class="dark-purple-bg text-white p-2"><b>Bonus #2 - Hello, Dazzling Hair!</b></div>
                         <p class="p-3">Grow thick, full & lustrous locks in no time with easy homemade remedies.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
                     <div class="bg-white text-dark rounded shadow overflow-hidden h-100">
-                        <img src="https://primebiome24.com//statics/img/bonus3.png" class="img-fluid">
+                        <img src="https://primebiome24.com//statics/img/bonus3.png" class="img-fluid" alt="Bonus 3 - White Teeth" loading="lazy">
                         <div class="dark-purple-bg text-white p-2"><b>Bonus #3 - White In a Flash!</b></div>
                         <p class="p-3">Quickly brighten your teeth with a simple brushing-trick celebrities use.</p>
                     </div>
@@ -161,10 +188,10 @@
                         <div class="dashed-badge green">✔ YOU SAVE $200!</div>
                         <div class="dashed-badge">✔ 60 DAYS GUARANTEE</div>
                     </div>
-                    <img src="https://primebiome24.com//statics/img/prod_2_bottle.png" style="max-height:180px;" class="my-3">
-                    <img src="https://primebiome24.com//statics/img/upgrade_so.png" class="img-fluid mb-3">
+                    <img src="https://primebiome24.com//statics/img/prod_2_bottle.png" style="max-height:180px;" class="my-3" alt="2 Bottles" loading="lazy">
+                    <img src="https://primebiome24.com//statics/img/upgrade_so.png" class="img-fluid mb-3" alt="Secure Upgrade" loading="lazy">
                     <h4 class="font-weight-bold">TOTAL: $158</h4>
-                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2">
+                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2" alt="Accepted Cards" loading="lazy">
                     <p class="small text-muted mt-2">+ 9.99 Shipping</p>
                 </div>
             </div>
@@ -179,10 +206,10 @@
                         <div class="dashed-badge">✔ 60 DAYS GUARANTEE</div>
                         <div class="dashed-badge">✔ 3 FREE EBOOKS!</div>
                     </div>
-                    <img src="https://primebiome24.com//statics/img/fe_6_bottle.png" style="max-height:210px;" class="my-3">
-                    <img src="https://primebiome24.com//statics/img/upgrade2_so.png" class="img-fluid mb-3">
+                    <img src="https://primebiome24.com//statics/img/fe_6_bottle.png" style="max-height:210px;" class="my-3" alt="6 Bottles" loading="lazy">
+                    <img src="https://primebiome24.com//statics/img/upgrade2_so.png" class="img-fluid mb-3" alt="Free Shipping" loading="lazy">
                     <h3 class="font-weight-bold text-danger">TOTAL: $294</h3>
-                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2">
+                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2" alt="Accepted Cards" loading="lazy">
                     <p class="text-success font-weight-bold mt-2">* FREE SHIPPING</p>
                 </div>
             </div>
@@ -195,10 +222,10 @@
                         <div class="dashed-badge green">✔ YOU SAVE $330!</div>
                         <div class="dashed-badge">✔ 60 DAYS GUARANTEE</div>
                     </div>
-                    <img src="https://primebiome24.com//statics/img/prod_3_bottle.png" style="max-height:180px;" class="my-3">
-                    <img src="https://primebiome24.com//statics/img/upgrade_so.png" class="img-fluid mb-3">
+                    <img src="https://primebiome24.com//statics/img/prod_3_bottle.png" style="max-height:180px;" class="my-3" alt="3 Bottles" loading="lazy">
+                    <img src="https://primebiome24.com//statics/img/upgrade_so.png" class="img-fluid mb-3" alt="Secure Upgrade" loading="lazy">
                     <h4 class="font-weight-bold">TOTAL: $177</h4>
-                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2">
+                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2" alt="Accepted Cards" loading="lazy">
                     <p class="text-success font-weight-bold mt-2">* FREE SHIPPING</p>
                 </div>
             </div>
