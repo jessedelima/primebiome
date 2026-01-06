@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noimageindex, nofollow, nosnippet">
+    <title>PrimeBiome - Official Presentation</title>
+    <link rel="icon" type="image/png" href="https://primebiome24.com//statics/img/favicon.png">
+    
+    <link rel="stylesheet" type="text/css" href="https://primebiome24.com//statics/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://primebiome24.com//statics/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://primebiome24.com//statics/css/webfont.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { display: block !important; opacity: 1 !important; visibility: visible !important; font-family: 'Quicksand', sans-serif; color: #272727; }
+        
+        /* BANNER DE CHAMADA (image_e2a666.png) */
+        .claim-banner { background-color: #007953; padding: 25px 15px; position: relative; margin-top: 40px; }
+        .claim-banner h2 { color: #fff; font-weight: 700; font-size: 28px; text-align: center; margin: 0; line-height: 1.2; }
+        .claim-banner:after { content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 15px solid #007953; }
+
+        /* BOXES DE COMPRA (image_d3a662.jpg) */
+        .price-box { border-radius: 15px; background: #fff; transition: all 0.3s ease; border: 1px solid #e0e0e0; cursor: pointer; text-align: center; padding: 20px; }
+        .price-box:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .price-box.highlighted { border: 3px solid #007953 !important; background-color: #fafff3 !important; }
+        .price-large { color: #007953; font-size: 60px; font-weight: 800; line-height: 1; margin-top: 10px; }
+        .price-unit { color: #007953; font-size: 18px; font-weight: 600; }
+        .dashed-badge { border: 1.5px dashed #272727; border-radius: 6px; padding: 5px 10px; font-size: 12px; font-weight: 700; display: inline-block; margin: 3px 0; width: 90%; text-align: left; text-transform: uppercase; }
+        .dashed-badge.green { color: #00a536; border-color: #00a536; }
+        .total-row { font-size: 22px; font-weight: 400; margin-top: 15px; }
+
+        /* INGREDIENTES (image_efd0ec.jpg) */
+        .ing-circle { width: 100%; max-width: 250px; border-radius: 50%; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .ing-label { background: #272727; color: #fff; padding: 8px 20px; border-radius: 5px; font-weight: 700; display: inline-block; margin-top: -20px; position: relative; z-index: 2; width: 80%; }
+
+        /* FAQ (image_d2a2e4.png) */
+        .accordion { background-color: #EFEFEF; border: none; cursor: pointer; text-align: left; margin-bottom: 10px; width: 100%; border-radius: 10px; outline: none; transition: 0.4s; padding: 20px 25px; display: flex; justify-content: space-between; align-items: center; }
+        .accordion span { font-size: 20px; font-weight: 700; color: #1a1a1a; }
+        .arrow { background-image: url(https://primebiome24.com/statics/img/arrow.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 18px; height: 18px; transition: 0.3s; }
+        .active .arrow { transform: rotate(180deg); }
+        .panel { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+        .panel p { padding: 15px 0; font-size: 17px; line-height: 1.6; }
+
+        /* DEPOIMENTOS */
+        .testi-card { padding: 30px; border-radius: 20px; margin-bottom: 25px; }
+        .bg-testi-1 { background-color: #f0f9ff; }
+        .bg-testi-2 { background-color: #f0fff4; }
+        .bg-testi-3 { background-color: #fffaf0; }
+        
+        img { cursor: pointer; max-width: 100%; height: auto; }
+        a { text-decoration: none !important; }
+    </style>
+
+    <script>
+        const LNK1 = "https://www.checkout-ds24.com/product/604071?aff=Jesselimalima";
+        const LNK2 = "https://www.checkout-ds24.com/product/583059?aff=Jesselimalima";
+        const LNK3 = "https://www.checkout-ds24.com/product/583058?aff=Jesselimalima";
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // FAQ Logic
+            var acc = document.getElementsByClassName("accordion");
+            for (let i = 0; i < acc.length; i++) {
+                acc[i].onclick = function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
+                };
+            }
+            // Clique Global em Imagens
+            document.querySelectorAll('img').forEach(img => {
+                if (!img.closest('a')) img.onclick = () => window.location.href = LNK2;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid dark-purple-bg py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="https://primebiome24.com//statics/img/logo_white.png" style="max-width:100px;">
+            <div class="d-none d-lg-block text-white font-weight-bold">
+                <a href="#ingredients" class="text-white mx-3">Ingredients</a>
+                <a href="#bonuses" class="text-white mx-3">FREE Bonuses</a>
+                <a href="#faq" class="text-white mx-3">FAQ</a>
+                <a href="#order-now" class="ml-2"><img src="https://primebiome24.com//statics/img/order-now.png" style="max-width:120px;"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="light-purple-bg text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center">
+                    <img src="https://primebiome24.com//statics/img/tsl-main.png" style="max-width:350px;">
+                </div>
+                <div class="col-lg-8 py-3">
+                    <h1 class="font-weight-bold display-4">The Skin-Gut Cell Turnover Breakthrough</h1>
+                    <p class="lead mt-4">Skin cell turnover rejuvenates skin by replacing old cells with new ones. PrimeBiome supports beneficial bacteria, helping to promote better skin health and a more youthful appearance.</p>
+                    <img src="https://primebiome24.com//statics/img/certifications_new.png" class="mt-4" style="max-width:500px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5" id="ingredients">
+        <h1 class="text-center font-weight-bold mb-5">Inside every probiotic gummy of PrimeBiome:</h1>
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-5">
+                <img src="https://primebiome24.com//statics/img/ingredient1.png" class="ing-circle">
+                <div class="ing-label">B. Coagulans</div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <img src="https://primebiome24.com//statics/img/ingredient2.png" class="ing-circle">
+                <div class="ing-label">Babchi</div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <img src="https://primebiome24.com//statics/img/ingredient3.png" class="ing-circle">
+                <div class="ing-label">Dandelion</div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <img src="https://primebiome24.com//statics/img/ingredient4.png" class="ing-circle">
+                <div class="ing-label">Fennel</div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <img src="https://primebiome24.com//statics/img/ingredient5.png" class="ing-circle">
+                <div class="ing-label">Inulin</div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <img src="https://primebiome24.com//statics/img/ingredient6.png" class="ing-circle">
+                <div class="ing-label">Fenugreek</div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5">
+                <img src="https://primebiome24.com//statics/img/ingredient10.png" class="ing-circle">
+                <div class="ing-label">Slippery Elm Bark</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bonus-bg py-5" id="bonuses">
+        <div class="container text-center text-white">
+            <h1 class="font-weight-bold mb-5">Order 6 Bottles & Get 3 FREE Bonuses!</h1>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="bg-white text-dark rounded shadow overflow-hidden h-100">
+                        <img src="https://primebiome24.com//statics/img/bonus1.png" class="img-fluid">
+                        <div class="dark-purple-bg text-white p-2"><b>Bonus #1 - See You Never, Cellulite!</b></div>
+                        <p class="p-3">Erase cellulite fast, naturally, and with no effort! Tips on how to finally get rid of the orange-peel skin.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="bg-white text-dark rounded shadow overflow-hidden h-100">
+                        <img src="https://primebiome24.com//statics/img/bonus2.png" class="img-fluid">
+                        <div class="dark-purple-bg text-white p-2"><b>Bonus #2 - Hello, Dazzling Hair!</b></div>
+                        <p class="p-3">Grow thick, full & lustrous locks in no time with easy homemade remedies.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="bg-white text-dark rounded shadow overflow-hidden h-100">
+                        <img src="https://primebiome24.com//statics/img/bonus3.png" class="img-fluid">
+                        <div class="dark-purple-bg text-white p-2"><b>Bonus #3 - White In a Flash!</b></div>
+                        <p class="p-3">Quickly brighten your teeth with a simple brushing-trick celebrities use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid claim-banner" id="order-now">
+        <div class="container">
+            <h2>Claim Your Discounted PrimeBiome Below While Stocks Last!</h2>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="price-box border shadow-sm" onclick="window.location.href=LNK1">
+                    <p class="bg-light p-2 font-weight-bold rounded mb-3">Basic</p>
+                    <div class="price-large">$79 <span class="price-unit">/ Bottle</span></div>
+                    <div class="my-3">
+                        <div class="dashed-badge green">✔ YOU SAVE $200!</div>
+                        <div class="dashed-badge">✔ 60 DAYS GUARANTEE</div>
+                    </div>
+                    <img src="https://primebiome24.com//statics/img/prod_2_bottle.png" style="max-height:180px;" class="my-3">
+                    <img src="https://primebiome24.com//statics/img/upgrade_so.png" class="img-fluid mb-3">
+                    <h4 class="font-weight-bold">TOTAL: $158</h4>
+                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2">
+                    <p class="small text-muted mt-2">+ 9.99 Shipping</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="price-box highlighted shadow-lg" onclick="window.location.href=LNK2">
+                    <p class="bg-danger text-white p-2 font-weight-bold rounded mb-3">BEST VALUE!</p>
+                    <div class="price-large">$49 <span class="price-unit">/ Bottle</span></div>
+                    <div class="my-3">
+                        <div class="dashed-badge green">✔ YOU SAVE $780!</div>
+                        <div class="dashed-badge green">✔ BIGGEST DISCOUNT</div>
+                        <div class="dashed-badge">✔ 60 DAYS GUARANTEE</div>
+                        <div class="dashed-badge">✔ 3 FREE EBOOKS!</div>
+                    </div>
+                    <img src="https://primebiome24.com//statics/img/fe_6_bottle.png" style="max-height:210px;" class="my-3">
+                    <img src="https://primebiome24.com//statics/img/upgrade2_so.png" class="img-fluid mb-3">
+                    <h3 class="font-weight-bold text-danger">TOTAL: $294</h3>
+                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2">
+                    <p class="text-success font-weight-bold mt-2">* FREE SHIPPING</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="price-box border shadow-sm" onclick="window.location.href=LNK3">
+                    <p class="bg-info text-white p-2 font-weight-bold rounded mb-3">Most Popular</p>
+                    <div class="price-large">$59 <span class="price-unit">/ Bottle</span></div>
+                    <div class="my-3">
+                        <div class="dashed-badge green">✔ YOU SAVE $330!</div>
+                        <div class="dashed-badge">✔ 60 DAYS GUARANTEE</div>
+                    </div>
+                    <img src="https://primebiome24.com//statics/img/prod_3_bottle.png" style="max-height:180px;" class="my-3">
+                    <img src="https://primebiome24.com//statics/img/upgrade_so.png" class="img-fluid mb-3">
+                    <h4 class="font-weight-bold">TOTAL: $177</h4>
+                    <img src="https://primebiome24.com//statics/img/credit-cards.png" style="max-width:180px;" class="mt-2">
+                    <p class="text-success font-weight-bold mt-2">* FREE SHIPPING</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5" id="faq">
+        <h2 class="text-center font-weight-bold mb-5" style="font-size: 40px;">Frequently Asked Questions</h2>
+        <div class="accordion-div mx-auto" style="max-width: 900px;">
+            <button class="accordion"><span>How does PrimeBiome work?</span><div class="arrow"></div></button>
+            <div class="panel"><p>PrimeBiome combines unique ingredients designed to support the cell turnover process by maintaining a healthy skin and gut microbiome. In turn, the new beneficial bacteria help promote a more youthful appearance.</p></div>
+
+            <button class="accordion" type="button"><span>What is your money back guarantee?</span><div class="arrow"></div></button>
+            <div class="panel"><p>Our money-back guarantee is a risk-free option we are offering you because we believe in this formula so much. It means you can try PrimeBiome for a full 60 days. And if you are not completely convinced by the amazing results, then you just get your money back.</p></div>
+
+            <button class="accordion"><span>How many bottles should I order?</span><div class="arrow"></div></button>
+            <div class="panel"><p>Most of our clients order six bottles at a time to get the massive discount, free shipping, and 3 free online guides. That's the best value choice.</p></div>
+
+            <button class="accordion"><span>How do I use PrimeBiome?</span><div class="arrow"></div></button>
+            <div class="panel"><p>Simply take 1 probiotic gummy per day.</p></div>
+
+            <button class="accordion"><span>Is this a one-off purchase?</span><div class="arrow"></div></button>
+            <div class="panel"><p>Yes, your order is a one-off purchase with no hidden autoship, clauses, or charges. The price you see is the only price you will pay.</p></div>
+
+            <button class="accordion"><span>What are the ingredients in PrimeBiome?</span><div class="arrow"></div></button>
+            <div class="panel"><p>It contains a proprietary formula of scientifically proven ingredients including Babchi, Dandelion, Fennel, Inulin, and B. Coagulans.</p></div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5 text-center">
+        <div class="container">
+            <p>Copyright © 2026 <b>PrimeBiome</b> | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
