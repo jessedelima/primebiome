@@ -52,27 +52,6 @@
         a { text-decoration: none !important; }
     </style>
 
-    <script>
-        const LNK1 = "https://www.checkout-ds24.com/product/604071?aff=Jesselimalima";
-        const LNK2 = "https://www.checkout-ds24.com/product/583059?aff=Jesselimalima";
-        const LNK3 = "https://www.checkout-ds24.com/product/583058?aff=Jesselimalima";
-
-        document.addEventListener("DOMContentLoaded", function() {
-            // FAQ Logic
-            var acc = document.getElementsByClassName("accordion");
-            for (let i = 0; i < acc.length; i++) {
-                acc[i].onclick = function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
-                };
-            }
-            // Clique Global em Imagens
-            document.querySelectorAll('img').forEach(img => {
-                if (!img.closest('a')) img.onclick = () => window.location.href = LNK2;
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -254,5 +233,6 @@
             <p>Copyright © 2026 <b>PrimeBiome</b> | All Rights Reserved</p>
         </div>
     </footer>
+    <script src="main.js" defer></script>
 </body>
 </html>
